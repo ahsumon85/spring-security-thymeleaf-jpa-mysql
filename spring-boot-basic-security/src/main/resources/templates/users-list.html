@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>Users list</title>
+<th:block th:include="layout/header"></th:block>
+</head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(document).ready(
+			function() {
+				$("#myInput").on(
+						"keyup",
+						function() {
+							var value = $(this).val().toLowerCase();
+							$("#myTable tr").filter(
+									function() {
+										$(this).toggle(
+												$(this).text().toLowerCase()
+														.indexOf(value) > -1)
+									});
+						});
+			});
+</script>
+
+<body style="background-color: #DADBDB">
+	<div class="container">
+		<div>
+			<div class="panel-heading">
+				<div class="col-md-4 col-md-offset-8">
+					<input id="myInput" class="form-control" type="text"
+						placeholder="Search..." aria-label="Search" />
+				</div>
+			</div>
+			<form class="form-horizontal" th:object="${userDTO}" method="post"
+				th:action="@{/savePlayerUrl}" enctype="multipart/form-data">
+				<br />
+				<table class="table table-hover table-success">
+					<thead>
+						<tr>
+							<th scope="col">User ID</th>
+							<th scope="col">User name</th>
+							<th scope="col">Age</th>
+							<th scope="col">Email</th>
+							<th scope="col">Phone</th>
+
+						</tr>
+					</thead>
+					<tbody id="myTable">
+						<tr th:each="value, rowStat : ${users}">
+							<th th:text="${rowStat.count}"></th>
+							<td th:text="${value.firstName}">Name</td>
+							<td th:text="${value.birthDate}">age</td>
+							<td th:text="${value.email}">email</td>
+							<td th:text="${value.phone}">phone</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+

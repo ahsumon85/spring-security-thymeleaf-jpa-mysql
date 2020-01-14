@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title th:utext="${userName}"></title>
+<th:block th:include="layout/header"></th:block>
+</head>
+<body style="background-color: #DADBDB;">
+
+	<div class="container">
+		<form class="form-horizontal" th:object="${countryDTO}"
+			th:action="@{/saveCountry}" method="post"
+			enctype="multipart/form-data">
+			<br /> <br />
+			<br />
+			<div
+				class="col-sm-4 shadow-none  rounded col-md-offset-4 text-white"
+				style="border: 1px solid silver; border-radius: 15px; background-color: #098CA9">
+				<div class="form-group " style="text-align: center;">
+					<h3 class="col-sm-9 form-signin-heading">User info</h3>
+				</div>
+
+				<div class="col-sm-12">
+					<div class="form-group">
+						<label class=" control-label">First name:</label> <label
+							class=" control-label" th:utext="${user.firstName}"></label>
+					</div>
+
+					<div class="form-group">
+						<label class=" control-label">List name:</label> <label
+							class=" control-label" th:utext="${user.lastName}"></label>
+					</div>
+
+					<div class="form-group">
+						<label class=" control-label">Address:</label> <label
+							class=" control-label" th:utext="${user.address}"></label>
+					</div>
+
+					<div class="form-group">
+						<label class=" control-label">Phone:</label> <label
+							class=" control-label" th:utext="${user.phone}"></label>
+					</div>
+
+					<div class="form-group">
+						<label class=" control-label">Email:</label> <label
+							class=" control-label" th:utext="${user.email}"></label>
+					</div>
+
+					<div class="form-group">
+						<label class=" control-label">Birth date:</label> <label
+							class=" control-label" th:utext="${user.birthDate}"></label>
+					</div>
+					<br />Are you want? <a th:href="${'/change/password'}"
+						style="width: 300px; margin-top: -50px; color: white"> Change
+						password</a> <br /> <br />
+				</div>
+
+			</div>
+		</form>
+
+	</div>
+
+
+</body>
+
+</html>

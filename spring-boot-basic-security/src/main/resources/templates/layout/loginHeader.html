@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+<link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"
+	href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"
+	media="screen" />
+	
+<link rel="stylesheet" th:href="@{/css/style.css}"
+	href="../../static/css/style.css" />
+
+<link rel="stylesheet" th:href="@{/w3css/4/w3.css}"
+	href="https://www.w3schools.com/w3css/4/w3.css" />
+<link rel="stylesheet"
+	th:href="@{/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet"
+	th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}" />
+<script
+	th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js}"></script>
+<script
+	th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+	
+<style>
+
+
+
+/* Style the input field */
+#myInput {
+	padding: 20px;
+	margin-top: -6px;
+	border: 0;
+	border-radius: 0;
+	background: #f1f1f1;
+}
+</style>
+<style>
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+
+li:last-child {
+	border-right: none;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+}
+
+li a:hover:not (.active ) {
+	background-color: #111;
+	text-decoration: none;
+}
+
+.active {
+	background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div th:fragment="header">
+
+			<div class="row text-center" style="height: 5%">
+
+				<div class="row">
+
+				<h1>Hello World</h1>
+
+
+				</div>
+			</div>
+
+		</div>
+		
+	</div>
+
+</body>
+</html>
