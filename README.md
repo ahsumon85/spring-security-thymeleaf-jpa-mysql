@@ -5,7 +5,7 @@ In this article, we will see how to secure a spring-boot-2.0 MVC pattern applica
 1. `$ clone git https://github.com/ahasanhabibsumon/spring-boot-security.git`
 2. `$ mvn clean install`
 3. `$ mvn spring-boot:run` 
-or import maven project on IDE 
+4. or import maven project on IDE 
 
 ### MySQL database configuration
 1. change database user_name and password.
