@@ -8,8 +8,8 @@ In this article, we will see how to secure a spring-boot-2.0 MVC pattern applica
 4. or import maven project on IDE 
 
 ### MySQL database configuration
-1. change database user_name and password.
-2. `create database basic_security;`
+1. change database user `user_name` and `password`.
+2. `create database spring_crud;`
 
 ### Run spring-boot-security project
 Go to browser and enter URL `http://localhost:8088`
