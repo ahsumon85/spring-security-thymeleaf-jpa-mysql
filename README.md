@@ -1,5 +1,5 @@
 # spring-boot-security
-In this article, we will see how to secure a spring-boot-2.0 MVC pattern application using spring basic security. a user can registration with user name &amp; password as a role base and user can update password. after user login a can view module by role wise. it's has two role admin and user.
+In this article, we will see how to secure a spring-boot-2.0 MVC pattern application using spring basic security. a user can registration with user name &amp; password as a role base and user can update password. after user login a can view module by role wise. it's has two role admin and user
 
 ### Import spring-boot-security
 1. `$ git clone https://github.com/ahsumon85/spring-boot-security.git`
